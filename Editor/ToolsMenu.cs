@@ -1,34 +1,46 @@
-using System.IO;
 using UnityEngine;
 using UnityEditor;
-
-using static System.IO.Directory;
-using static System.IO.Path;
-using static UnityEngine.Application;
-using static UnityEditor.AssetDatabase;
 
 namespace Insignia
 {
     public static class ToolsMenu
     {
+        #region MyRegion
+
         [MenuItem("Tools/Setup/Create Default Folders")]
-        public static void CreateDefaultFolders()
+        static void CreateDefaultFolders()
         {
-            Debug.Log(dataPath);
+            Debug.Log(Application.dataPath);
 
             string[] structure = new string[] { "Art/Materials", "Art/Models", "Art/Textures", "Audio/Music", "Audio/Sound", "Code/Scripts", "Code/Shaders", "Docs", "Level/Prefabs", "Level/Scenes", "Level/UI" };
 
-            Dir("_Project", structure);
-            Refresh();
+            Folders.CreateDirectories("_Project", structure);
+            AssetDatabase.Refresh();
         }
 
-        public static void Dir(string root, params string[] dir)
-        {
-            var fullpath = Combine(dataPath, root);
-            foreach (var newDir in dir)
-            {
-                CreateDirectory(Combine(fullpath, newDir));
-            }
-        }
+        #endregion
+
+        #region Default Manifest
+
+        [MenuItem("Tools/Setup/Load New Manifest")]
+        static async void LoadNewManifest() => await Packages.ReplacePackageFromGist("4ba2be47500ddc0626eb2bd67b9576a2");
+
+        #endregion
+
+        #region Packages
+
+        [MenuItem("Tools/Setup/Packages/PerspectiveAPI")]
+        static void AddPerspectiveAPI() => Packages.InstallUnityPackageFromURL("https://github.com/DanDHenshaw/Perspective-API-for-Unity.git");
+
+        [MenuItem("Tools/Setup/Packages/New Input System")]
+        static void AddNewInputSystem() => Packages.InstallUnityPackage("inputsystem");
+
+        [MenuItem("Tools/Setup/Packages/Cinemachine")]
+        static void AddCinemachine() => Packages.InstallUnityPackage("cinemachine");
+
+        [MenuItem("Tools/Setup/Packages/Universal Render Pipeline")]
+        static void AddURP() => Packages.InstallUnityPackage("render-pipelines.universal");
+
+        #endregion
     }
 }
