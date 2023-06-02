@@ -29,17 +29,20 @@ namespace Insignia
 
         #region Packages
 
-        [MenuItem("Tools/Setup/Packages/PerspectiveAPI")]
+        [MenuItem("Tools/Setup/Packages/Other/PerspectiveAPI")]
         static void AddPerspectiveAPI() => Packages.InstallUnityPackageFromURL("https://github.com/DanDHenshaw/Perspective-API-for-Unity.git");
 
-        [MenuItem("Tools/Setup/Packages/New Input System")]
+        [MenuItem("Tools/Setup/Packages/Other/New Input System")]
         static void AddNewInputSystem() => Packages.InstallUnityPackage("inputsystem");
 
-        [MenuItem("Tools/Setup/Packages/Cinemachine")]
+        [MenuItem("Tools/Setup/Packages/Camera/Cinemachine")]
         static void AddCinemachine() => Packages.InstallUnityPackage("cinemachine");
 
-        [MenuItem("Tools/Setup/Packages/Universal Render Pipeline")]
+        [MenuItem("Tools/Setup/Packages/Visual/Universal Render Pipeline")]
         static void AddURP() => Packages.InstallUnityPackage("render-pipelines.universal");
+
+        [MenuItem("Tools/Setup/Packages/Visual/Post Processing")]
+        static void AddURP() => Packages.InstallUnityPackage("postprocessing");
 
         #endregion
     }
