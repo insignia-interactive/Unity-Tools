@@ -42,7 +42,7 @@ namespace Insignia
         static void AddURP() => Packages.InstallUnityPackage("render-pipelines.universal");
 
         [MenuItem("Tools/Setup/Packages/Visual/Post Processing")]
-        static void AddURP() => Packages.InstallUnityPackage("postprocessing");
+        static void AddPostProcessing() => Packages.InstallUnityPackage("postprocessing");
 
         #endregion
     }
