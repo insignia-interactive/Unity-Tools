@@ -29,20 +29,46 @@ namespace Insignia
 
         #region Packages
 
-        [MenuItem("Tools/Setup/Packages/Other/PerspectiveAPI")]
-        static void AddPerspectiveAPI() => Packages.InstallUnityPackageFromURL("https://github.com/DanDHenshaw/Perspective-API-for-Unity.git");
+            #region Fundementals
 
-        [MenuItem("Tools/Setup/Packages/Other/New Input System")]
+        [MenuItem("Tools/Setup/Packages/Fundementals/New Input System")]
         static void AddNewInputSystem() => Packages.InstallUnityPackage("inputsystem");
+
+        [MenuItem("Tools/Setup/Packages/Fundementals/Visual Scripting")]
+        static void AddNewInputSystem() => Packages.InstallUnityPackage("visualscripting");
+
+            #endregion
+
+            #region Camera
 
         [MenuItem("Tools/Setup/Packages/Camera/Cinemachine")]
         static void AddCinemachine() => Packages.InstallUnityPackage("cinemachine");
 
-        [MenuItem("Tools/Setup/Packages/Visual/Universal Render Pipeline")]
+        [MenuItem("Tools/Setup/Packages/Camera/Post Processing")]
+        static void AddPostProcessing() => Packages.InstallUnityPackage("postprocessing");
+
+            #endregion
+
+            #region Render Pipeline
+
+        [MenuItem("Tools/Setup/Packages/Render Pipeline/Universal Render Pipeline")]
         static void AddURP() => Packages.InstallUnityPackage("render-pipelines.universal");
 
-        [MenuItem("Tools/Setup/Packages/Visual/Post Processing")]
-        static void AddPostProcessing() => Packages.InstallUnityPackage("postprocessing");
+        [MenuItem("Tools/Setup/Packages/Render Pipeline/High Definition Pipeline")]
+        static void AddHDRP() => Packages.InstallUnityPackage("render-pipelines.high-definition");
+
+            #endregion
+
+            #region Other
+
+                #region Custom
+
+        [MenuItem("Tools/Setup/Packages/Other/Custom/PerspectiveAPI")]
+        static void AddPerspectiveAPI() => Packages.InstallUnityPackageFromURL("https://github.com/DanDHenshaw/Perspective-API-for-Unity.git");
+
+                #endregion
+
+            #endregion
 
         #endregion
     }
