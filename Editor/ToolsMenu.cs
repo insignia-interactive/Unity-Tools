@@ -41,29 +41,44 @@ namespace Insignia
 
             #region Camera
 
-        [MenuItem("Tools/Setup/Packages/Camera/Cinemachine", priority = 200)]
+        [MenuItem("Tools/Setup/Packages/Camera/Cinemachine", priority = 102)]
         static void AddCinemachine() => Packages.InstallUnityPackage("cinemachine");
 
-        [MenuItem("Tools/Setup/Packages/Camera/Post Processing", priority = 201)]
+        [MenuItem("Tools/Setup/Packages/Camera/Post Processing", priority = 103)]
         static void AddPostProcessing() => Packages.InstallUnityPackage("postprocessing");
 
             #endregion
 
             #region Render Pipeline
 
-        [MenuItem("Tools/Setup/Packages/Render Pipeline/Universal Render Pipeline", priority = 300)]
+        [MenuItem("Tools/Setup/Packages/Render Pipeline/Universal Render Pipeline", priority = 104)]
         static void AddURP() => Packages.InstallUnityPackage("render-pipelines.universal");
 
-        [MenuItem("Tools/Setup/Packages/Render Pipeline/High Definition Pipeline", priority = 301)]
+        [MenuItem("Tools/Setup/Packages/Render Pipeline/High Definition Pipeline", priority = 105)]
         static void AddHDRP() => Packages.InstallUnityPackage("render-pipelines.high-definition");
 
             #endregion
 
             #region Other
 
+                #region Tools
+
+        [MenuItem("Tools/Setup/Packages/Other/Tools/Asset Localization for Unity", priority = 106)]
+            static void AddAssetLocalizationForUnity() => Packages.InstallUnityPackageFromURL("https://github.com/ibrahimpenekli/GameToolkit-Localization.git#2.2.3");
+
+        [MenuItem("Tools/Setup/Packages/Other/Tools/Scene Selection Toolbar", priority = 107)]
+            private static void AddSceneSelectionToolbar()
+            {
+                Packages.InstallUnityPackageFromURL("https://github.com/marijnz/unity-toolbar-extender.git");
+                Packages.InstallPackageFromGist("4122c117c927d5c370dd562e619129e6", "giacomelli",
+                    "SceneSelectionToolbar");
+            }
+
+                #endregion
+
                 #region Custom
 
-        [MenuItem("Tools/Setup/Packages/Other/Custom/PerspectiveAPI", priority = 1000)]
+        [MenuItem("Tools/Setup/Packages/Other/Custom/PerspectiveAPI", priority = 108)]
         static void AddPerspectiveAPI() => Packages.InstallUnityPackageFromURL("https://github.com/DanDHenshaw/Perspective-API-for-Unity.git");
 
                 #endregion
