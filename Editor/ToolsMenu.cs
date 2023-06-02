@@ -35,7 +35,7 @@ namespace Insignia
         static void AddNewInputSystem() => Packages.InstallUnityPackage("inputsystem");
 
         [MenuItem("Tools/Setup/Packages/Fundementals/Visual Scripting")]
-        static void AddNewInputSystem() => Packages.InstallUnityPackage("visualscripting");
+        static void AddVisualScripting() => Packages.InstallUnityPackage("visualscripting");
 
             #endregion
 
