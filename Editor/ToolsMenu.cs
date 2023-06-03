@@ -63,8 +63,8 @@ namespace Insignia
 
                 #region Tools
 
-        [MenuItem("Tools/Setup/Packages/Other/Tools/Asset Localization for Unity", priority = 106)]
-            static void AddAssetLocalizationForUnity() => Packages.InstallUnityPackageFromURL("https://github.com/ibrahimpenekli/GameToolkit-Localization.git#2.2.3");
+        [MenuItem("Tools/Setup/Packages/Other/Tools/Localization", priority = 106)]
+        static void AddAssetLocalizationForUnity() => Packages.InstallUnityPackage("localization");
 
         [MenuItem("Tools/Setup/Packages/Other/Tools/Scene Selection Toolbar", priority = 107)]
             private static void AddSceneSelectionToolbar()
