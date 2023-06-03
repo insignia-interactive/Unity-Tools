@@ -1,5 +1,6 @@
 using System.IO;
 using UnityEngine;
+using UnityEditor;
 
 namespace Insignia
 {
@@ -12,6 +13,16 @@ namespace Insignia
             {
                 Directory.CreateDirectory(Path.Combine(fullpath, newDir));
             }
+        }
+
+        public static void MoveScenes(string oldSceneFolder, string newSceneFolder)
+        {
+            oldSceneFolder = Path.Combine(Application.dataPath, oldSceneFolder);
+            newSceneFolder = Path.Combine(Application.dataPath, newSceneFolder);
+
+            FileUtil.MoveFileOrDirectory(oldSceneFolder, newSceneFolder);
+            FileUtil.DeleteFileOrDirectory($"{oldSceneFolder}.meta");
+            FileUtil.DeleteFileOrDirectory(oldSceneFolder);
         }
     }
 }

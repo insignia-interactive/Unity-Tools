@@ -10,11 +10,12 @@ namespace Insignia
         [MenuItem("Tools/Setup/Create Default Folders", priority = 1)]
         static void CreateDefaultFolders()
         {
-            Debug.Log(Application.dataPath);
-
-            string[] structure = new string[] { "Art/Materials", "Art/Models", "Art/Textures", "Audio/Music", "Audio/Sound", "Code/Scripts", "Code/Shaders", "Docs", "Level/Prefabs", "Level/Scenes", "Level/UI" };
+            string[] structure = new string[] { "Art/Materials", "Art/Models", "Art/Textures", "Audio/Music", "Audio/Sound", "Code/Scripts", "Code/Shaders", "Docs", "Level/Prefabs", "Level/UI" };
 
             Folders.CreateDirectories("_Project", structure);
+
+            Folders.MoveScenes("Scenes", "_Project/Level/Scenes");
+
             AssetDatabase.Refresh();
         }
 
