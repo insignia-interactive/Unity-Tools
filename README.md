@@ -6,7 +6,7 @@ You can install this package in two ways.
 ### A) Package Manager (GIT URL)
 The suggested way to install this package is through the Unity's Package Manager itself, via a GIT url. This way, you will be notified once new versions get released, and you will be able to download them directly from the Unity Editor.
 
--> **The GIT URL you need to add to the Package manager is the following** (copy and paste it): **https://github.com/insignia-interactive/Tools.git**
+-> **The GIT URL you need to add to the Package manager is the following** (copy and paste it): **https://github.com/insignia-interactive/Unity-Tools.git**
 
 For more info on how to install custom packages from a GIT Url, please read here: https://docs.unity3d.com/Manual/upm-ui-giturl.html
 
@@ -38,7 +38,7 @@ I'd be super happy to see you taking part in it and sharing it around.
 ## Contributing
 If you want to contribute:
 
-1. Fork the project: https://github.com/insignia-interactive/Tools/forks
+1. Fork the project: https://github.com/insignia-interactive/Unity-Tools/forks
 2. Create your own feature branch
 3. Commit your changes to GitHub
 4. Push to the branch 
